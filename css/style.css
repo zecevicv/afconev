@@ -192,6 +192,103 @@ body {
   }
 }
 
+/* #Header
+================================================== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  color: white;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent);
+}
+
+.header .container {
+  width: 87.5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 6.35vw;
+}
+
+.header-logo img {
+  width: 9.2vw;
+}
+
+.header-links ul,
+.header-links ul a {
+  display: flex;
+  align-items: center;
+}
+
+.header-links ul li:not(:last-child) {
+  margin-left: 2vw;
+}
+
+.header-links ul a img {
+  width: .5vw;
+  margin-right: .5vw;
+}
+
+.header-action {
+  display: flex;
+  align-items: center;
+}
+
+.header-whatsapp a {
+  display: flex;
+  align-items: center;
+}
+
+.header-whatsapp img {
+  width: 1.8vw;
+  margin-right: .5vw;
+}
+
+.header-cart img {
+  width: 1vw;
+}
+
+.header-search img {
+  width: 1.25vw;
+}
+
+.header-cart,
+.header-search {
+  margin-left: 1.5vw;
+}
+
+@media (max-width: 1023.98px) {
+  .header .container {
+    width: 90%;
+    height: auto;
+    padding: 4vw 0 6vw 0;
+    flex-direction: row-reverse;
+  }
+  
+  .header-logo img {
+    width: 26vw;
+  }
+  
+  .header-whatsapp img {
+    width: 6.65vw;
+    margin-right: 1.33vw;
+  }
+  
+  .header-cart img {
+    width: 4.66vw;
+  }
+  
+  .header-cart {
+    margin: 0 4vw;
+  }
+
+  .header-hamburger img {
+    width: 7.33vw;
+  }
+}
+
 /* #Footer
 ================================================== */
 .footer {
@@ -359,6 +456,9 @@ body {
 .home-banner > .img img,
 .home-banner > .img picture {
   width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  object-position: center;
 }
 
 .home-banner > .text {
@@ -936,5 +1036,37 @@ body {
   
   .contact-form .checkboxes > *:not(:last-child) {
     margin-left: 4.66vw;
+  }
+}
+
+/* #Static Btn
+================================================== */
+.static-btn {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+.static-btn img {
+  width: 4.7vw;
+}
+
+.static-btn .text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+  padding-top: 1.5vw;
+}
+
+@media (max-width: 1023.98px) {
+  .static-btn img {
+    width: 17.33vw;
+  }
+
+  .static-btn .text {
+    padding-top: 6vw;
   }
 }
