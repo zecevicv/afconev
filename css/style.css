@@ -51,6 +51,11 @@ body {
   color: black;
 }
 
+.btn-secondary {
+  background-image: linear-gradient(to top right, #27FCA0, #55FFE8, #2ADBFF);
+  color: black;
+}
+
 @media (max-width: 1023.98px) {
   .btn {
     height: 9.33vw;
@@ -2340,5 +2345,46 @@ body {
 
   .home-page .post-slider-1 {
     order: -17;
+  }
+}
+
+/* #Error
+================================================== */
+.error {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.error .container {
+  width: 52.4%;
+}
+
+.error .img {
+  margin-bottom: 1.3vw;
+}
+
+.error .img img {
+  width: 100%;
+}
+
+.error h1 {
+  margin-bottom: 1.5vw;
+  line-height: 1;
+}
+
+@media (max-width: 1023.98px) {
+  .error .container {
+    width: 100%;
+  }
+  
+  .error .img {
+    margin-bottom: 9.33vw;
+  }
+  
+  .error h1 {
+    margin-bottom: 4vw;
   }
 }

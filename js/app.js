@@ -87,7 +87,7 @@ if (document.querySelector('.post-slider .swiper-slide')) {
     gsap.from(slider.querySelectorAll('.swiper-slide'), {
       x: 100,
       opacity: 0,
-      stagger: .05,
+      stagger: .1,
       duration: .8,
       scrollTrigger: {
         trigger: slider.querySelectorAll('.swiper-slide'),
@@ -162,7 +162,7 @@ if (document.querySelector('.contact-form')) {
       gsap.from(input, {
         opacity: 0,
         xPercent: 100,
-        duration: 1,
+        duration: .8,
         ease: Power1.easeOut,
         scrollTrigger: {
           trigger: input,
@@ -178,7 +178,7 @@ if (document.querySelector('.contact-form')) {
       gsap.from(select, {
         opacity: 0,
         xPercent: 100,
-        duration: 1,
+        duration: .8,
         ease: Power1.easeOut,
         scrollTrigger: {
           trigger: select,
