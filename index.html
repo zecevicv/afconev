@@ -262,22 +262,50 @@
 
   <!-- Home Banner -->
   <div class="home-banner">
-    <!-- Img -->
-    <div class="img">
-      <picture>
-        <source media="(min-width:1024px)" srcset="img/home/banner.jpg">
-        <img class="lazy" data-src="img/home/banner-mobile.jpg" alt="afconev-img">
-      </picture>
-    </div>
-    <!-- Text -->
-    <div class="text">
-      <h1 class="f-d-100 f-m-120 medium">
-        בדרך שלך
-        <br>בדרך שלך
-      </h1>
-      <p class="f-d-25 f-m-32">אפקון תחבורה חשמלית גאה להוביל ולבנות 
-        את רשת הטעינה המרכזית בישראל</p>
-      <a href="#" class="btn btn-primary"><span>הזמן עכשיו</span></a>
+    <!-- Slider -->
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <!-- Slide -->
+        <div class="swiper-slide">
+          <!-- Img -->
+          <div class="img">
+            <picture>
+              <source media="(min-width:1024px)" srcset="img/home/banner.jpg">
+              <img class="lazy" data-src="img/home/banner-mobile.jpg" alt="afconev-img">
+            </picture>
+          </div>
+          <!-- Text -->
+          <div class="text">
+            <h1 class="f-d-100 f-m-120 medium">
+              בדרך שלך
+              <br>בדרך שלך
+            </h1>
+            <p class="f-d-25 f-m-32">אפקון תחבורה חשמלית גאה להוביל ולבנות 
+              את רשת הטעינה המרכזית בישראל</p>
+            <a href="#" class="btn btn-primary"><span>הזמן עכשיו</span></a>
+          </div>
+        </div>
+        <!-- Slide -->
+        <div class="swiper-slide">
+          <!-- Img -->
+          <div class="img">
+            <picture>
+              <source media="(min-width:1024px)" srcset="img/home/banner.jpg">
+              <img class="lazy" data-src="img/home/banner-mobile.jpg" alt="afconev-img">
+            </picture>
+          </div>
+          <!-- Text -->
+          <div class="text">
+            <h1 class="f-d-100 f-m-120 medium">
+              בדרך שלך
+              <br>בדרך שלך
+            </h1>
+            <p class="f-d-25 f-m-32">אפקון תחבורה חשמלית גאה להוביל ולבנות 
+              את רשת הטעינה המרכזית בישראל</p>
+            <a href="#" class="btn btn-primary"><span>הזמן עכשיו</span></a>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Cards -->
     <div class="cards">
@@ -322,10 +350,14 @@
       </div>
       <!-- Text -->
       <div class="text">
-        <h2 class="f-d-50 f-m-70 medium">איתור עמדת טעינה</h2>
-        <p class="f-d-22 f-m-30"> במקום לנסות להיזכר איפה הטענתם את הרכב בפעם האחרונה
-          באזור כזה או אחר, תוכלו להגיע לעמוד הזה ובלחיצת כפתור
-         .לאתר על המפה את העמדה הקרובה אליכם</p>
+        <!-- Heading -->
+        <div class="heading">
+          <h2 class="f-d-50 f-m-70 medium">איתור עמדת טעינה</h2>
+          <p class="f-d-22 f-m-30"> במקום לנסות להיזכר איפה הטענתם את הרכב בפעם האחרונה
+            באזור כזה או אחר, תוכלו להגיע לעמוד הזה ובלחיצת כפתור
+           .לאתר על המפה את העמדה הקרובה אליכם</p>
+        </div>
+        <!-- Search -->
         <div class="location-search d-desktop">
           <p class="f-d-22">:מיקום</p>
           <form>
@@ -335,6 +367,7 @@
             <input type="text" class="input-primary f-d-18 f-m-30" placeholder="?באיזה עיר אתה מחפש">
           </form>
         </div>
+        <!-- Filters -->
         <div class="location-filters">
           <!-- Accordion -->
           <div class="accordion">

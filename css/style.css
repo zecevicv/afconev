@@ -217,6 +217,15 @@ body {
   animation-delay: 1.25s;
 }
 
+.benefits .pulse-animation::after,
+.benefits .pulse-animation::before {
+  animation: animateXl 2.5s linear infinite;
+}
+
+.benefits .pulse-animation::after {
+  animation-delay: 1.25s;
+}
+
 @keyframes animate {
   0% {
     transform: scale(1.05);
@@ -227,6 +236,20 @@ body {
   }
   100% {
     transform: scale(2.25);
+    opacity: 0;
+  }
+}
+
+@keyframes animateXl {
+  0% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.75);
     opacity: 0;
   }
 }
@@ -492,15 +515,15 @@ body {
   position: relative;
 }
 
-.home-banner > .img img,
-.home-banner > .img picture {
+.home-banner .swiper-slide .img img,
+.home-banner .swiper-slide .img picture {
   width: 100%;
   max-height: 100vh;
   object-fit: cover;
   object-position: center;
 }
 
-.home-banner > .text {
+.home-banner .swiper-slide .text {
   color: white;
   position: absolute;
   top: 50%;
@@ -508,11 +531,11 @@ body {
   right: 12vw;
 }
 
-.home-banner > .text h1 {
+.home-banner .swiper-slide .text h1 {
   line-height: 1;
 }
 
-.home-banner > .text p {
+.home-banner .swiper-slide .text p {
   width: 20.8vw;
   margin-top: .5vw;
   margin-bottom: 2vw;
@@ -523,6 +546,7 @@ body {
   position: absolute;
   bottom: 1.3vw;
   left: 1.3vw;
+  z-index: 20;
 }
 
 .home-banner .card {
@@ -559,8 +583,22 @@ body {
   width: 6.25vw;
 }
 
+.home-banner .swiper-slide {
+  position: relative;
+}
+
+/* Animation */
+.home-banner .swiper-slide .text {
+  opacity: 0;
+  transition: all .4s ease .4s;
+}
+
+.home-banner .swiper-slide.swiper-slide-active .text {
+  opacity: 1;
+}
+
 @media (max-width: 1023.98px) {
-  .home-banner > .text {
+  .home-banner .swiper-slide .text {
     top: 40vw;
     transform: translateX(-50%);
     right: auto;
@@ -569,7 +607,7 @@ body {
     width: 78%;
   }
   
-  .home-banner > .text p {
+  .home-banner .swiper-slide .text p {
     width: 100%;
     margin-top: 2vw;
     margin-bottom: 4vw;
@@ -1006,6 +1044,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: -1.25vw;
+  overflow: hidden;
 }
 
 .contact-form form>* {
@@ -1663,7 +1702,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all .6s ease;
+  transition: opacity .4s ease;
   overflow: hidden;
 }
 
@@ -1710,7 +1749,7 @@ body {
   width: 100%;
   opacity: 0;
   visibility: hidden;
-  transition: all .6s ease;
+  transition: all .4s ease;
 }
 
 .product-slider .swiper-slide-active .product-img .bg {

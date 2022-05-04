@@ -17,6 +17,14 @@ if (document.querySelector('.post-slider .swiper')) {
   });
 }
 
+/* #Home Banner Slider
+  ======================================================= */
+if (document.querySelector('.home-banner .swiper')) {
+  new Swiper(".home-banner .swiper", {
+    slidesPerView: 1
+  });
+}
+
 /* #Customer Testimonials Animation
   ======================================================= */
 if (document.querySelector('.customer-testimonials')) {
@@ -48,6 +56,7 @@ if (document.querySelector('.station-locations') && window.innerWidth > 1024) {
   ======================================================= */
 if (document.querySelector('.product-slider')) {
   swiper = new Swiper(".product-slider .swiper", {
+    loop: true,
     pagination: {
       el: ".product-slider .swiper-pagination",
       type: "fraction",
@@ -65,4 +74,116 @@ if (document.querySelector('.product-slider')) {
       }
     }
   });
+}
+
+/* #Post Slider Animations
+  ======================================================= */
+if (document.querySelector('.post-slider .swiper-slide')) {
+  const sliders = document.querySelectorAll('.post-slider');
+  
+  sliders.forEach((slider) => {
+    const slides = slider.querySelectorAll('.swiper-slide');
+
+    gsap.from(slider.querySelectorAll('.swiper-slide'), {
+      x: 100,
+      opacity: 0,
+      stagger: .05,
+      duration: .8,
+      scrollTrigger: {
+        trigger: slider.querySelectorAll('.swiper-slide'),
+      },
+    });
+  });
+}
+
+/* #Benefits Elements Animation
+  ======================================================= */
+if (document.querySelector('.benefits .elements')) {
+  gsap.from(".benefits .elements li ", {
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.1,
+    duration: .8,
+    ease: "back.out(2)",
+    scrollTrigger: {
+      trigger: ".benefits .elements",
+    },
+  });
+}
+
+/* #Customers Elements Animation
+  ======================================================= */
+if (document.querySelector('.customers .elements')) {
+  gsap.from(".customers .elements li ", {
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.1,
+    duration: .8,
+    ease: "back.out(2)",
+    scrollTrigger: {
+      trigger: ".customers",
+    },
+  });
+}
+
+/* #Station Locations Animation
+  ======================================================= */
+if (document.querySelector('.station-locations')) {
+  gsap.from(".station-locations .text > *", {
+    y: 100,
+    opacity: 0,
+    stagger: 0.2,
+    duration: .8,
+    ease: "back.out(2)",
+    scrollTrigger: {
+      trigger: ".station-locations .text",
+    },
+  });
+
+  gsap.from(".station-locations .charging-btn", {
+    scale: 0,
+    opacity: 0,
+    stagger: 0.2,
+    duration: .8,
+    ease: "back.out(2)",
+    scrollTrigger: {
+      trigger: ".station-locations .text",
+    },
+  });
+}
+
+/* #Animations
+    ======================================================= */
+if (document.querySelector('.contact-form')) {
+  if (document.querySelector('.contact-form .input-primary')) {
+    const inputs = document.querySelectorAll('.contact-form .input-primary');
+
+    inputs.forEach((input) => {
+      gsap.from(input, {
+        opacity: 0,
+        xPercent: 100,
+        duration: 1,
+        ease: Power1.easeOut,
+        scrollTrigger: {
+          trigger: input,
+        },
+      });
+    });
+  }
+
+  if (document.querySelector('.contact-form .select-primary')) {
+    const selects = document.querySelectorAll('.contact-form .select-primary');
+
+    selects.forEach((select) => {
+      gsap.from(select, {
+        opacity: 0,
+        xPercent: 100,
+        duration: 1,
+        ease: Power1.easeOut,
+        scrollTrigger: {
+          trigger: select,
+        },
+      });
+    });
+  }
 }
