@@ -941,6 +941,70 @@ body {
     width: 22vw;
   }
 }
+/* #Banner
+================================================== */
+.banner {
+  position: relative;
+}
+
+.banner .swiper-slide .img img,
+.banner .swiper-slide .img picture {
+  width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  object-position: center;
+}
+
+.banner .swiper-slide .text {
+  color: white;
+  position: absolute;
+  top: 54%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+}
+
+.banner .swiper-slide .text h1 {
+  line-height: 1;
+}
+
+.banner .swiper-slide .text p {
+  margin-top: .5vw;
+  margin-bottom: 1.3vw;
+  line-height: 1.2;
+}
+
+.banner .swiper-slide {
+  position: relative;
+}
+
+/* Animation */
+.banner .swiper-slide .text {
+  opacity: 0;
+  transition: all .4s ease .4s;
+}
+
+.banner .swiper-slide.swiper-slide-active .text {
+  opacity: 1;
+}
+
+@media (max-width: 1023.98px) {
+  .banner .swiper-slide .text {
+    top: 43%;
+    transform: translateX(-50%);
+    right: auto;
+    left: 50%;
+    text-align: center;
+    width: 90%;
+  }
+  
+  .banner .swiper-slide .text p {
+    width: 100%;
+    margin-top: 2vw;
+    margin-bottom: 4vw;
+  }
+}
 
 /* #Post Slider
 ================================================== */
@@ -2665,13 +2729,36 @@ body {
 
 .faq .container {
   width: 87.4%;
+}
+
+.faq .tabs {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
 }
 
 /* Sidebar */
 .faq .sidebar {
   flex: 0 0 30.36vw;
+  position: sticky;
+  top: 10vw;
+}
+
+.faq h1 {
+  margin-bottom: 1.2vw;
+}
+
+.faq .tab-btn {
+  color: #C1C1C1;
+  padding-right: 1.5vw;
+  position: relative;
+  transition: all .4s ease;
+  margin-bottom: 1vw;
+  line-height: 1;
+}
+
+.faq .tab-btn.active {
+  color: black;
 }
 
 /* Main */
@@ -2723,6 +2810,24 @@ body {
   flex: 0 0 32.96vw;
 }
 
+@media (min-width: 1024px) {
+  .faq .tab-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    height: 1px;
+    width: 1vw;
+    background-color: black;
+    opacity: 0;
+    transition: all .4s ease;
+  }
+  
+  .faq .tab-btn.active::after {
+    opacity: 1;
+  }
+}
+
 @media (max-width: 1023.98px) {
   .faq-page {
     padding-top: 19.36vw;
@@ -2734,19 +2839,41 @@ body {
   
   .faq .container {
     width: 90%;
+  }
+  
+  .faq .tabs {
     display: block;
   }
   
   /* Sidebar */
   .faq .sidebar {
-    margin-bottom: 11.33vw;
+    margin-bottom: 7.33vw;
+    position: static;
+    overflow: hidden;
   }
   
   .faq h1 {
     text-align: center;
     margin-bottom: 6vw;
   }
+
+  .faq .tab-navigation ul {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    overflow: auto;
+    padding-bottom: 4vw;
+  }
+
+  .faq .tab-btn {
+    padding-right: 0;
+    margin-bottom: 0;
+  }
   
+  .faq .tab-btn:not(:last-child) {
+    margin-left: 5.33vw;
+  }
+
   /* Main */
   .faq .collapsible {
     padding: 4.26vw 0;

@@ -8,8 +8,8 @@ const tabs = document.querySelectorAll('.tabs');
 
 if (tabs) {
   tabs.forEach((tab) => {
-    const tabBtns = tab.querySelectorAll(':scope > .tab-navigation .tab-btn');
-    const tabPanels = tab.querySelectorAll(':scope > .tab-content > ul > .tab-panel');
+    const tabBtns = tab.querySelectorAll('.tab-navigation .tab-btn');
+    const tabPanels = tab.querySelectorAll('.tab-content .tab-panel');
 
     tabBtns.forEach((tabBtn) => {
       tabBtn.addEventListener('click', (e) => {

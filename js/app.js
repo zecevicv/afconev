@@ -59,6 +59,14 @@ if (document.querySelector('.home-banner .swiper')) {
   });
 }
 
+/* #Banner Slider
+  ======================================================= */
+if (document.querySelector('.banner .swiper')) {
+  new Swiper(".banner .swiper", {
+    slidesPerView: 1
+  });
+}
+
 /* #Customer Testimonials Animation
   ======================================================= */
 if (document.querySelector('.customer-testimonials')) {
