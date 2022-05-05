@@ -103,6 +103,10 @@ body {
   background-color: white;
 }
 
+.header.header-scrolled .link.link-white::before {
+  background-color: black;
+}
+
 @media (max-width: 1023.98px) {
   .link {
     padding-bottom: 1vw;
@@ -268,7 +272,23 @@ body {
   width: 100%;
   z-index: 10000;
   color: white;
+  transition: all .4s ease;
+}
+
+.header.header-shadow {
   background-image: linear-gradient(to bottom, rgba(0,0,0,.7), transparent);
+}
+
+.header.header-scrolled,
+.header.show {
+  background-color: white;
+  background-image: none!important;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
+}
+
+.header.header-scrolled *,
+.header.show * {
+  color: black;
 }
 
 .header .container {
@@ -290,7 +310,21 @@ body {
 }
 
 .header-links ul li:not(:last-child) {
-  margin-left: 2vw;
+  margin-left: .5vw;
+}
+
+.header-links ul > li > a {
+  margin: 0 1vw;
+}
+
+.header-links ul .collapse-toggler > a {
+  padding: 0 1vw;
+  height: 3.8vw;
+}
+
+.header-links ul .collapse-toggler > a::before,
+.header-links ul .collapse-toggler > a::after {
+  display: none;
 }
 
 .header-links ul a img {
@@ -326,6 +360,25 @@ body {
   margin-left: 1.5vw;
 }
 
+.header a {
+  position: relative;
+}
+
+.header .icon-black {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity .4s ease;
+}
+
+.header.header-scrolled .icon-black,
+.header.show .icon-black {
+  opacity: 1;
+}
+
 @media (max-width: 1023.98px) {
   .header .container {
     width: 90%;
@@ -353,6 +406,205 @@ body {
 
   .header-hamburger img {
     width: 7.33vw;
+  }
+}
+
+/* #Header Menu
+================================================== */
+.header .collapsible.show .collapse-toggler a {
+  background-color: white;
+  color: black;
+}
+
+.header .collapsible .collapse-toggler a .icon-black {
+  left: 1vw;
+}
+
+.header .collapsible.show .collapse-toggler a .icon-black {
+  opacity: 1;
+}
+
+.header .collapse > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.6vw;
+}
+
+.header .collapse .icons {
+  display: flex;
+  text-align: center;
+}
+
+.header .collapse .icons .icon {
+  flex: 0 0 7.6vw;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.header .collapse .icons .icon:not(:last-child) {
+  margin-left: 2.34vw;
+}
+
+.header .collapse .icons .icon .img {
+  margin-bottom: .625vw;
+}
+
+.header .collapse .icons .icon .img img {
+  width: 100%;
+  border-radius: 50%;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .14);
+}
+
+.header .card {
+  position: relative;
+}
+
+.header .card .text {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: .78vw;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .card .text * {
+  color: white!important;
+}
+
+.header .card .img img {
+  width: 15.26vw;
+}
+
+@media (min-width: 1024px) {
+  .header .collapse {
+    position: absolute;
+    bottom: 1.5vw;
+    left: 50%;
+    transform: translateY(100%) translateX(-50%);
+    width: 71.25%;
+    background-color: white;
+    color: black;
+    border-radius: .5vw;
+  }
+  
+  .header .collapsible .collapse-toggler a {
+    transition: all .4s ease;
+    border-top-left-radius: .5vw;
+    border-top-right-radius: .5vw;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .header .header-links {
+    position: absolute;
+    top: 19.36vw;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 19.36vw);
+    overflow-y: auto;
+    background-color: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+    border-top: 1px solid #BEBEBE;
+    padding: 2vw 7.33vw 20vw 7.33vw;
+  }
+
+  .header.show .header-links {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header-links ul {
+    display: block;
+  }
+
+  .header-links ul > li > a {
+    margin: 0;
+    border-bottom: 1px solid #BEBEBE;
+    padding: 3.5vw 0;
+  }
+  
+  .header-links ul .collapse-toggler > a {
+    padding: 3.5vw 0;
+    height: auto;
+  }
+
+  .header .collapsible .collapse-toggler img {
+    transition: all .4s ease;
+  }
+
+  .header .collapsible.show .collapse-toggler img {
+    transform: rotate(180deg);
+  }
+  
+  .header-links ul .collapsible {
+    border-bottom: 1px solid #BEBEBE;
+  }
+
+  .header-links ul a img {
+    width: 2vw;
+    margin-right: 2vw;
+  }
+
+  .header-search-form {
+    padding: 3.5vw 0;
+    border-bottom: 1px solid #BEBEBE;
+  }
+
+  .header-search-form img {
+    width: 4vw;
+    margin-left: 3vw;
+  }
+
+  .header .collapse > div {
+    display: block;
+    padding: 4vw 0 6.65vw 0;
+  }
+  
+  .header .collapse .icons {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .header .collapsible .collapse-toggler a .icon-black {
+    left: 0;
+  }
+  
+  .header .collapse .icons .icon {
+    flex: 0 0 50%;
+    margin-bottom: 6.65vw;
+  }
+  
+  .header .collapse .icons .icon:not(:last-child) {
+    margin-left: 0;
+  }
+  
+  .header .collapse .icons .icon .img {
+    margin-bottom: 2.5vw;
+  }
+  
+  .header .collapse .icons .icon .img img {
+    width: 31.46vw;
+    margin: 0 auto;
+  }
+  
+  .header .card {
+    margin-top: 0;
+  }
+  
+  .header .card .text {
+    bottom: 3.33vw;
+  }
+  
+  .header .card .img img {
+    width: 100%;
   }
 }
 

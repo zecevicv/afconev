@@ -1,3 +1,37 @@
+/* #Hamburger
+  ======================================================= */
+const header = document.querySelector('.header');
+const headerBtn = document.querySelector('.header-hamburger');
+
+headerBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  header.classList.toggle('show');
+  body.classList.toggle('no-scroll');
+});
+
+/* #Header
+  ======================================================= */
+
+// Color Change
+if (document.querySelector('.header')) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 0) {
+      header.classList.add('header-scrolled');
+    } else {
+      header.classList.remove('header-scrolled');
+    }
+  });
+}
+
+if (document.querySelector('.header')) {
+  if (window.scrollY > 0) {
+    header.classList.add('header-scrolled');
+  } else {
+    header.classList.remove('header-scrolled');
+  }
+}
+
 /* #Post Slider
   ======================================================= */
 if (document.querySelector('.post-slider .swiper')) {
@@ -80,7 +114,7 @@ if (document.querySelector('.product-slider')) {
   ======================================================= */
 if (document.querySelector('.post-slider .swiper-slide')) {
   const sliders = document.querySelectorAll('.post-slider');
-  
+
   sliders.forEach((slider) => {
     const slides = slider.querySelectorAll('.swiper-slide');
 
