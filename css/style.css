@@ -280,15 +280,25 @@ body {
 }
 
 .header.header-scrolled,
-.header.show {
+.header.show,
+.header.header-always-white {
   background-color: white;
   background-image: none!important;
   box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
 }
 
 .header.header-scrolled *,
-.header.show * {
+.header.show *,
+.header.header-always-white * {
   color: black;
+}
+
+.header.header-always-white {
+  box-shadow: none!important;
+}
+
+.header.header-always-white.header-scrolled {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .1)!important;
 }
 
 .header .container {
@@ -375,7 +385,8 @@ body {
 }
 
 .header.header-scrolled .icon-black,
-.header.show .icon-black {
+.header.show .icon-black,
+.header.header-always-white .icon-black {
   opacity: 1;
 }
 
@@ -490,6 +501,7 @@ body {
     background-color: white;
     color: black;
     border-radius: .5vw;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
   }
   
   .header .collapsible .collapse-toggler a {
