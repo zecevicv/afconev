@@ -152,6 +152,20 @@ if (document.querySelector('.post-slider .swiper-slide')) {
   });
 }
 
+/* #Projects Animations
+  ======================================================= */
+if (document.querySelector('.projects .cards li')) {
+  gsap.from(document.querySelectorAll('.projects .cards li'), {
+    x: 100,
+    opacity: 0,
+    stagger: .1,
+    duration: .8,
+    scrollTrigger: {
+      trigger: document.querySelector('.projects'),
+    },
+  });
+}
+
 /* #Benefits Elements Animation
   ======================================================= */
 if (document.querySelector('.benefits .elements')) {
@@ -167,6 +181,19 @@ if (document.querySelector('.benefits .elements')) {
   });
 }
 
+/* #Benefits Elements Animation
+  ======================================================= */
+if (document.querySelector('.customers-2')) {
+  gsap.from(".customers-2 li", {
+    opacity: 0,
+    stagger: 0.05,
+    duration: .4,
+    scrollTrigger: {
+      trigger: ".customers-2",
+    },
+  });
+}
+
 /* #Customers Elements Animation
   ======================================================= */
 if (document.querySelector('.customers .elements')) {
@@ -178,6 +205,21 @@ if (document.querySelector('.customers .elements')) {
     ease: "back.out(2)",
     scrollTrigger: {
       trigger: ".customers",
+    },
+  });
+}
+
+/* #Why Us Animation
+  ======================================================= */
+if (document.querySelector('.why-us .elements')) {
+  gsap.from(".why-us .elements li ", {
+    yPercent: 100,
+    opacity: 0,
+    stagger: 0.1,
+    duration: .8,
+    ease: "back.out(2)",
+    scrollTrigger: {
+      trigger: ".why-us",
     },
   });
 }
