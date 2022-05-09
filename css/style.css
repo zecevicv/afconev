@@ -44,16 +44,30 @@ body {
   font-weight: 500;
   border-radius: 500px;
   padding: 0 2.5vw;
+  transition: all .4s ease;
 }
 
 .btn-primary {
   background-image: linear-gradient(to top right, #93FF00, #A0F3BD, #84FFE4);
   color: black;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+.btn-primary:hover {
+  background-position: 0 0;
 }
 
 .btn-secondary {
   background-image: linear-gradient(to top right, #27FCA0, #55FFE8, #2ADBFF);
   color: black;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+
+
+.btn-secondary:hover {
+  background-position: 0 0;
 }
 
 @media (max-width: 1023.98px) {
