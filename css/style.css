@@ -390,6 +390,10 @@ body {
   position: relative;
 }
 
+.header .icon a {
+  display: block;
+}
+
 .header .icon-black {
   position: absolute;
   top: 0;
