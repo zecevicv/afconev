@@ -82,6 +82,20 @@ if (document.querySelector('.customer-testimonials')) {
   });
 }
 
+/* #Customer Testimonials Animation
+  ======================================================= */
+if (document.querySelector('.faq .sidebar .img')) {
+  gsap.from('.faq .sidebar .img', {
+    xPercent: 50,
+    opacity: 0,
+    duration: 1.2,
+    ease: Power4.easeOut,
+    scrollTrigger: {
+      trigger: '.faq .sidebar .img',
+    },
+  });
+}
+
 /* #Station Locations Animation
   ======================================================= */
 if (document.querySelector('.station-locations') && window.innerWidth > 1024) {
