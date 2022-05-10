@@ -3158,9 +3158,13 @@ body {
   position: static;
 }
 
+.business-customers-page .faq h1 {
+  margin-bottom: 31.2vw;
+}
+
 .business-customers-page .faq .sidebar .img {
   position: absolute;
-  bottom: 2.25vw;
+  top: 14vw;
   right: 0;
 }
 
