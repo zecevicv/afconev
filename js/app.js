@@ -32,6 +32,32 @@ if (document.querySelector('.header')) {
   }
 }
 
+/* #Search Menu
+  ======================================================= */
+const headerSearchIcons = document.querySelectorAll('.header-search-icon');
+const headerSearch = document.querySelector('.header-search');
+const headerSearchClose = document.querySelector('.header-search .close');
+
+headerSearchIcons.forEach((icon) => {
+  icon.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    headerSearch.classList.add('show');
+    body.classList.add('no-scroll');
+    header.classList.add('show-search');
+  });
+})
+
+
+headerSearchClose.addEventListener('click', (e) => {
+  e.preventDefault();
+
+  headerSearch.classList.remove('show');
+  body.classList.remove('no-scroll');
+  header.classList.remove('show');
+  header.classList.remove('show-search');
+});
+
 /* #Post Slider
   ======================================================= */
 if (document.querySelector('.post-slider .swiper')) {
