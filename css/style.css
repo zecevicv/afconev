@@ -44,7 +44,7 @@ body {
   font-weight: 500;
   border-radius: 500px;
   padding: 0 2.5vw;
-  transition: all .4s ease;
+  transition: all .5s ease;
 }
 
 .btn-primary {
@@ -3428,5 +3428,95 @@ body {
 
   .business-customers-page .why-us {
     order: -17;
+  }
+}
+
+/* #Popup
+================================================== */
+.popup {
+  background-color: rgba(255, 255, 255, .7);
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-close img {
+  width: 1.5vw;
+  margin-bottom: .9vw;
+}
+
+.popup-content {
+  width: 62.5%;
+  border-radius: .5vw;
+  overflow: hidden;
+  box-shadow: 0 3px 24px rgba(0, 0, 0, .1);
+}
+
+@media (max-width: 1023.98px) {
+  .popup-close img {
+    width: 5.33vw;
+    margin-bottom: 3.33vw;
+  }
+  
+  .popup-content {
+    width: 90%;
+    border-radius: 1.33vw;
+  }
+}
+
+/* #Marketing Popup
+================================================== */
+#marketing-popup .popup-content {
+  display: flex;
+  align-items: center;
+}
+
+#marketing-popup .img {
+  flex: 0 0 50%;
+  flex-shrink: 0;
+}
+
+#marketing-popup .img img {
+  width: 31.25vw;
+  height: 31.25vw;
+  object-fit: cover;
+  object-position: center;
+}
+
+#marketing-popup .text {
+  text-align: center;
+  padding: 2.96vw;
+}
+
+#marketing-popup .text h2 {
+  margin-bottom: 1vw;
+  line-height: 1;
+}
+
+#marketing-popup .text p {
+  margin-bottom: 2.34vw;
+  line-height: 1.5;
+}
+
+@media (max-width: 1023.98px) {
+  #marketing-popup .popup-content {
+    display: block;
+  }
+  
+  #marketing-popup .img img {
+    width: 100%;
+    height: 80vw;
+  }
+  
+  #marketing-popup .text {
+    padding: 6.65vw 5.33vw 8vw 5.33vw;
+  }
+  
+  #marketing-popup .text h2 {
+    margin-bottom: 2.66vw;
+  }
+  
+  #marketing-popup .text p {
+    margin-bottom: 6.65vw;
+    line-height: 1.3;
   }
 }
