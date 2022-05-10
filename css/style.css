@@ -533,10 +533,10 @@ body {
 @media (max-width: 1023.98px) {
   .header .header-links {
     position: absolute;
-    top: 19.36vw;
+    top: 19vw;
     left: 0;
     width: 100%;
-    height: calc(100vh - 19.36vw);
+    height: calc(100vh - 19vw);
     overflow-y: auto;
     background-color: white;
     opacity: 0;
