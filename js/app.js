@@ -191,6 +191,19 @@ if (document.querySelector('.product-slider')) {
   });
 }
 
+/* #Charging Stations
+  ======================================================= */
+if (document.querySelector('.charging-stations')) {
+  swiper = new Swiper(".charging-stations .swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".charging-stations .next",
+      prevEl: ".charging-stations .prev",
+    },
+    slidesPerView: 1
+  });
+}
+
 /* #Post Slider Animations
   ======================================================= */
 if (document.querySelector('.post-slider .swiper-slide')) {

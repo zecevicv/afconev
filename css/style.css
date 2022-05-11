@@ -1765,6 +1765,10 @@ select {
   .business-customers-page .post-slider-2 .solutions-card a {
     margin-top: auto;
   }
+
+  .business-customers-page .post-slider-3 .solutions-card .text {
+    justify-content: flex-end;
+  }
 }
 
 /* #Post Card
@@ -3947,20 +3951,20 @@ select {
 /* #Business Customers Order Mobile
 ================================================== */
 @media (max-width: 1023.98px) {
-  .business-customers-page {
+  .business-customers-page:not(.business-page) {
     display: flex;
     flex-direction: column;
   }
 
-  .business-customers-page .banner {
+  .business-customers-page:not(.business-page) .banner {
     order: -20;
   }
 
-  .business-customers-page .post-slider-1 {
+  .business-customers-page:not(.business-page) .post-slider-1 {
     order: -18;
   }
 
-  .business-customers-page .why-us {
+  .business-customers-page:not(.business-page) .why-us {
     order: -17;
   }
 }
@@ -4329,5 +4333,93 @@ select {
   .blog-post h3 {
     margin: 6.65vw 0 2vw 0;
     text-align: center;
+  }
+}
+
+/* #Charging Stations
+================================================== */
+.charging-stations {
+  padding-top: 5.2vw;
+}
+
+.charging-stations .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10.5vw 0 5.7vw;
+}
+
+.charging-stations .text {
+  flex: 0 0 27vw;
+}
+
+.charging-stations .img {
+  min-width: 0;
+  max-width: 100%;
+  min-height: 0;
+  max-height: 100%;
+  flex: 0 0 51.9vw;
+  position: relative;
+}
+
+.charging-stations .swiper-navigation .next {
+  left: 0;
+}
+
+.charging-stations .swiper-navigation .prev {
+  right: 0;
+}
+
+.charging-stations .swiper-slide img {
+  width: 42.55vw;
+  height: 38.64vw;
+  object-fit: cover;
+  object-position: center;
+  border-radius: .5vw;
+  margin: 0 auto;
+}
+
+@media (max-width: 1023.98px) {
+  .charging-stations {
+    padding-top: 10vw;
+  }
+  
+  .charging-stations .container {
+    display: block;
+    padding: 0 5.33vw;
+  }
+  
+  .charging-stations .text {
+    text-align: center;
+    line-height: 1.16;
+    margin-bottom: 6.65vw;
+  }
+
+  .charging-stations .text h2 {
+    margin-bottom: 1vw;
+  }
+  
+  .charging-stations .img {
+    flex: 0 0 51.9vw;
+    position: relative;
+    padding-bottom: 13.33vw;
+  }
+  
+  .charging-stations .swiper-navigation .next {
+    left: 38%;
+    top: auto;
+    bottom: 0;
+  }
+  
+  .charging-stations .swiper-navigation .prev {
+    right: 38%;
+    top: auto;
+    bottom: 0;
+  }
+  
+  .charging-stations .swiper-slide img {
+    width: 100%;
+    height: 80vw;
+    border-radius: 1.33vw;
   }
 }
