@@ -1238,6 +1238,10 @@ select {
   position: relative;
 }
 
+.business-customers-page .banner .swiper-slide .img img {
+  height: 37.5vw;
+}
+
 .banner .swiper-slide .img img,
 .banner .swiper-slide .img picture {
   width: 100%;
@@ -1281,6 +1285,10 @@ select {
 }
 
 @media (max-width: 1023.98px) {
+  .business-customers-page .banner .swiper-slide .img img {
+    height: 150vw;
+  }
+
   .banner .swiper-slide .text {
     top: 43%;
     transform: translateX(-50%);
@@ -1596,6 +1604,14 @@ select {
   margin-top: auto;
 }
 
+.business-customers-page .post-slider-2 .solutions-card a {
+  margin-top: 0;
+}
+
+.business-customers-page .post-slider-2 .solutions-card .text {
+  justify-content: flex-end;
+}
+
 @media (min-width: 1024px) {
   .solutions-card .img {
     position: relative;
@@ -1650,11 +1666,34 @@ select {
     visibility: hidden;
     transition: all .4s ease;
     color: black;
+    overflow: hidden;
   }
   
   .solutions-card:hover .text p {
     opacity: 1;
     visibility: visible;
+  }
+  
+  .business-customers-page .post-slider-2 .solutions-card .text a {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s ease;
+    color: black;
+  }
+  
+  .business-customers-page .post-slider-2 .solutions-card:hover .text a {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .business-customers-page .post-slider-2 .solutions-card .text a svg,
+  .business-customers-page .post-slider-2 .solutions-card .text a svg * {
+    fill: black;
+    stroke: black;
+  }
+
+  .solutions-card a {
+    overflow: hidden;
   }
 
   .solutions-card:hover a svg {
@@ -1664,6 +1703,22 @@ select {
   .solutions-card:hover a svg * {
     fill: black;
     stroke: black;
+  }
+
+  .business-customers-page .post-slider-2 .solutions-card .text p {
+    max-height: 0;
+  }
+
+  .business-customers-page .post-slider-2 .solutions-card:hover .text p {
+    max-height: 5vw;
+  }
+
+  .business-customers-page .post-slider-2 .solutions-card .text a {
+    max-height: 0;
+  }
+
+  .business-customers-page .post-slider-2 .solutions-card:hover .text a {
+    max-height: 1.8vw;
   }
 }
 
@@ -1705,6 +1760,10 @@ select {
 
   .solutions-card p {
     line-height: 1.16;
+  }
+
+  .business-customers-page .post-slider-2 .solutions-card a {
+    margin-top: auto;
   }
 }
 
@@ -1865,6 +1924,11 @@ select {
 ================================================== */
 .contact-form {
   padding: 4.4vw 0;
+  margin-top: 3.275vw;
+}
+
+.business-customers-page .contact-form {
+  box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
 }
 
 .contact-form .container {
@@ -1914,6 +1978,10 @@ select {
 }
 
 @media (max-width: 1023.98px) {
+  .business-customers-page .contact-form {
+    margin-top: 10vw;
+  }
+
   .contact-form {
     padding: 16.66vw 0 20vw 0;
   }
@@ -3888,11 +3956,7 @@ select {
     order: -20;
   }
 
-  .business-customers-page .customers-2 {
-    order: -19;
-  }
-
-  .business-customers-page .post-slider {
+  .business-customers-page .post-slider-1 {
     order: -18;
   }
 
