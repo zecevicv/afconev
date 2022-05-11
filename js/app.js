@@ -61,20 +61,42 @@ headerSearchClose.addEventListener('click', (e) => {
 /* #Post Slider
   ======================================================= */
 if (document.querySelector('.post-slider .swiper')) {
-  new Swiper(".post-slider .swiper", {
-    pagination: {
-      el: ".post-slider .swiper-pagination",
-      type: "progressbar",
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1.13
+  if (document.querySelector('.blog .post-slider')) {
+    const postSliders = document.querySelectorAll('.post-slider .swiper');
+
+    postSliders.forEach((slider) => {
+      const pagination = slider.querySelector('.swiper-pagination')
+      new Swiper(slider, {
+        pagination: {
+          el: pagination,
+          type: "progressbar",
+        },
+        breakpoints: {
+          0: {
+            slidesPerView: 1.34
+          },
+          1024: {
+            slidesPerView: 4.2
+          }
+        }
+      });
+    });
+  } else {
+    new Swiper(".post-slider .swiper", {
+      pagination: {
+        el: ".post-slider .swiper-pagination",
+        type: "progressbar",
       },
-      1024: {
-        slidesPerView: 3.33
+      breakpoints: {
+        0: {
+          slidesPerView: 1.13
+        },
+        1024: {
+          slidesPerView: 3.33
+        }
       }
-    }
-  });
+    });
+  }
 }
 
 /* #Home Banner Slider
@@ -90,6 +112,17 @@ if (document.querySelector('.home-banner .swiper')) {
 if (document.querySelector('.banner .swiper')) {
   new Swiper(".banner .swiper", {
     slidesPerView: 1
+  });
+}
+
+/* # Blog Banner Slider
+  ======================================================= */
+if (document.querySelector('.blog-banner .swiper')) {
+  new Swiper(".blog-banner .swiper", {
+    slidesPerView: 1,
+    pagination: {
+      el: ".blog-banner .swiper-pagination",
+    },
   });
 }
 
@@ -134,7 +167,7 @@ if (document.querySelector('.station-locations') && window.innerWidth > 1024) {
   });
 }
 
-/* #Produt Slider
+/* #Product Slider
   ======================================================= */
 if (document.querySelector('.product-slider')) {
   swiper = new Swiper(".product-slider .swiper", {
