@@ -1,0 +1,19 @@
+<svg id="Group_8934" data-name="Group 8934" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="33.432" height="29.186" viewBox="0 0 33.432 29.186">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_2352" data-name="Rectangle 2352" width="33.432" height="29.186" fill="none" stroke="#9b9b9b" stroke-width="1.5"/>
+    </clipPath>
+  </defs>
+  <g id="Group_8933" data-name="Group 8933" clip-path="url(#clip-path)">
+    <path id="Path_23468" data-name="Path 23468" d="M27.17,32.476A2.121,2.121,0,0,1,25.047,34.6H17.618v3.184a1.061,1.061,0,0,1-1.061,1.061H12.311a1.061,1.061,0,0,1-1.061-1.061V30.354c0-2.123,0-4.139,2.123-6.262v-.106a2.121,2.121,0,0,1-2.123-2.123V20.8a1.061,1.061,0,0,1,1.061-1.061H15.5l2.123-6.368c.3-.97,4.272-2.123,9.552-2.123s9.248,1.153,9.552,2.123l2.123,6.368h3.184A1.061,1.061,0,0,1,43.09,20.8v1.061a2.121,2.121,0,0,1-2.123,2.123v.106c2.123,2.123,2.123,4.139,2.123,6.262v7.429a1.061,1.061,0,0,1-1.061,1.061H37.783a1.061,1.061,0,0,1-1.061-1.061V34.6H30.354" transform="translate(-10.454 -10.454)" fill="none" stroke="#9b9b9b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <line id="Line_441" data-name="Line 441" y1="6.368" transform="translate(16.716 15.654)" fill="none" stroke="#9b9b9b" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    <path id="Path_23469" data-name="Path 23469" d="M183.75,191.25a2.121,2.121,0,0,0,2.123,2.123" transform="translate(-170.749 -177.718)" fill="none" stroke="#9b9b9b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    <path id="Path_23470" data-name="Path 23470" d="M260.873,191.25a2.121,2.121,0,0,1-2.123,2.123" transform="translate(-240.442 -177.718)" fill="none" stroke="#9b9b9b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    <line id="Line_442" data-name="Line 442" x2="3.184" transform="translate(15.124 15.654)" fill="none" stroke="#9b9b9b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    <line id="Line_443" data-name="Line 443" y2="4.245" transform="translate(13.001 9.287)" fill="none" stroke="#9b9b9b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    <line id="Line_444" data-name="Line 444" y2="4.245" transform="translate(20.43 9.287)" fill="none" stroke="#9b9b9b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    <line id="Line_445" data-name="Line 445" x2="7.429" transform="translate(13.001 9.287)" fill="none" stroke="#9b9b9b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    <line id="Line_446" data-name="Line 446" y2="4.245" transform="translate(14.593 5.041)" fill="none" stroke="#9b9b9b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+    <line id="Line_447" data-name="Line 447" y2="4.245" transform="translate(18.838 5.041)" fill="none" stroke="#9b9b9b" stroke-linecap="round" stroke-miterlimit="10" stroke-width="1.5"/>
+  </g>
+</svg>
