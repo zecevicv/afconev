@@ -1931,7 +1931,8 @@ select {
   margin-top: 3.275vw;
 }
 
-.business-customers-page .contact-form {
+.business-customers-page .contact-form,
+.importer-page .contact-form {
   box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
 }
 
@@ -3755,6 +3756,72 @@ select {
   }
 }
 
+/* #Importer FAQ
+================================================== */
+.importer-page .faq {
+  position: relative;
+}
+
+/* Sidebar */
+.importer-page .faq .sidebar {
+  position: static;
+}
+
+.importer-page .faq h1 {
+  margin-bottom: 31.2vw;
+}
+
+.importer-page .faq .sidebar .img {
+  position: absolute;
+  top: 14vw;
+  right: 0;
+}
+
+.importer-page .faq .sidebar .img img,
+.importer-page .faq .sidebar .img picture {
+  width: 30.57vw;
+}
+
+/* Main */
+.importer-page .faq .accordion {
+  margin-bottom: 1.3vw;
+}
+
+@media (max-width: 1023.98px) {
+  /* Sidebar */
+  .importer-page .faq .sidebar {
+    position: static;
+    padding-top: 73.46vw;
+    margin-bottom: 6.65vw;
+  }
+
+  .importer-page .faq .sidebar h1 {
+    margin-bottom: 0;
+  }
+  
+  .importer-page .faq .sidebar .img {
+    position: absolute;
+    bottom: auto;
+    top: 4vw;
+    right: 0;
+  }
+  
+  .importer-page .faq .sidebar .img img,
+  .importer-page .faq .sidebar .img picture {
+    width: 95.73vw;
+  }
+  
+  /* Main */
+  .importer-page .faq .accordion {
+    margin-bottom: 6.65vw;
+  }
+
+  .importer-page .faq .link-wrap {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 /* #Customers 2
 ================================================== */
 .customers-2 {
@@ -4421,5 +4488,27 @@ select {
     width: 100%;
     height: 80vw;
     border-radius: 1.33vw;
+  }
+}
+
+/* #Importer Page
+================================================== */
+@media (min-width: 1024px) {
+  .importer-page .customers-2 {
+    padding: 4.68vw 0 10vw 0;
+  }
+
+  .importer-page .customers-2 li {
+    flex: 0 0 20%;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .importer-page .customers-2 {
+    padding: 13.33vw 0;
+  }
+
+  .importer-page .banner .swiper-slide .text {
+    top: 33%;
   }
 }
