@@ -1973,7 +1973,8 @@ select {
   margin-top: 3.275vw;
 }
 
-.business-customers-page .contact-form {
+.business-customers-page .contact-form,
+.importer-page .contact-form {
   box-shadow: 0 3px 20px rgba(0, 0, 0, .1);
 }
 
